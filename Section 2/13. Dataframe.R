@@ -1,6 +1,4 @@
-# abbiamo vari metodi per creare un dataframe
-
-# direttamente tramite la funzione data.frame()
+# how to create a dataframe / 1
 
 df1 <- data.frame(id = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
                   name = c('Laura', 'Simon', 'Kate', 'Francis', 'Joseph', 'Rosie', 'Matt', 'Eleanor', 'Angie', 'Hamed'),
@@ -9,7 +7,7 @@ heights = c('168', '180', '165', '169', '178', '164', '182', '170', '163','164')
 age = c(32, 35, 54, 57, 39, 42, 33, 16, 29, 27))
 
 
-# oppure mettendo insieme più vettori attraverso la stessa funzione data.frame()
+# how to create a dataframe / 2
 
 v1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 v2 <- c('pizza', 'pasta', 'steak', 'sushi', 'pizza', 'pizza', 'sushi', 'pasta', 'sushi', 'steak')
@@ -19,75 +17,77 @@ v5 <- c(T, F, F, T, T, F, F, T, F, F)
 
 df2 <- data.frame(v1, v2, v3, v4, v5)
 
-# verifichiamo la classe dei due dataframe creati
+# check the class of the two dataframes
 
 class(df1)
 class(df2)
 
-# quali altri azioni possiamo svolgere sui nostri dataframe?
+# what other actions can we perform on our dataframes?
 
-# possiamo ad esempio aggiungere una variabile al nostro dataframe tramite l’operatore logico $ 
+# we can for example add a variable to our dataframe via the logical operator $ 
 
 df1$married <- c(T, F, F, T, T, F, F, T, F, F)
 
-# in questo caso abbiamo aggiunto un operatore logico: T sta per TRUE, e F per FALSE
+# in this case we have added a logical operator: T stands for TRUE, and F for FALSE
 
-# verifichiamo che la variabile sia stata aggiunta correttamente
+# let's check that the variable has been added correctly
 
-# per farlo utilizziamo la funzione head(), che ci mostra le prime occorrenze del dataframe
+# to do so, we use the head() function, which shows us the first occurrences of the dataframe
 
 head(df1)
 
-# posso anche decidere quante occorrenze stampare, tramite il secondo parametro della funzione head()
+# I can also decide how many occurrences to print, via the second parameter of the head() function
 
 head(df1, 3)
 
 
-# per rimuovere una variabile da un dataframe, invece, procediamo in questo modo
+# to remove a variable from a dataframe, on the other hand, we proceed as follows
 
 df$married <- NULL
 
-# possiamo aggiungere una variabile anche tramite la funzione cbind()
+# we can also add a variable via the cbind() function
 
 df1 <- cbind(df1, v5)
 
-# l’operatore ‘$’ può essere utilizzato per estrarre una variabile dal dataset, ad esempio: 
+# the operator '$' can be used to extract a variable from the dataset, for example: 
 
 age <- df1$age
 
-# sempre per estrarre delle variabili possiamo utilizzare anche delle notazioni alternative
+# to extract variables we can also use alternative notations
 
 age2 <- df1[['age']]
 
-# questa notazione, come quella precedente df$var, estrae la variabile come vettore, mentre quella qua sotto la estrae come dataframe
+# this notation, like the one above df$var, extracts the variable as a vector, while the one below extracts it as a dataframe
 
 age3 <- df1['age']
 
-# verifichiamo la struttura dati con la funzione class per i tre oggetti
+# let's check the data structure with the class function for the three objects
 
 class(age)
 class(age2)
 class(age3)
 
-# possiamo estrarre casi e variabili con le stesse logiche che abbiamo utilizzato per le matrici:
+# we can extract cases and variables with the same logic we used for matrices:
 
-# estraiamo soli casi
+# we only extract cases
+
 df1[1:5, ]
 
-# sole variabili
+# or variables
+
 df1[, 2:6]
 
-# entrambi
+# or both
 
 df1[6:10, 1:3]
 
-# per casi e variabili non contigui
+# for non-consequential cases and variables
 
 df1[c(1, 5, 7, 10), ]
 
 df1[, c(1, 3)]
 
-# oppure escludere dall’estrazione alcuni casi o variabili tramite l’estrazione inversa
+# or we can exclude certain cases or variables from extraction by means of reverse extraction
 
 df1[-2, ]
 
@@ -95,49 +95,51 @@ df1[-c(2,7),]
 
 df1[, -c(1,3)]
 
-# possiamo anche estrarre una o più variabili tramite il nome:
+# we can also extract one or more variables by name:
 
-# nel caso di variabili singole
+# in the case of single variables
 
-# sotto forma di vettore singolo
+# in the form of a single vector
 
 df1[, ‘name’]
 
-# sotto forma di dataframe
+# as dataframe
 
 df1[‘heights’]
 
-# interrogando il dataframe su un singolo caso
+# querying the dataframe on a single case
 
 df1[ 3, ‘sex’]
 
-# su più casi
+# on several cases
 
 df1[1:3, 'sex']
 
-# su più casi e variabili
+# on several cases and variables
 
 df1[1:8, c('sex', 'v5')]
 
 
-# possiamo anche isolare gruppi di casi che presentano determinate condizioni
+# we can also isolate groups of cases with certain conditions
 
-# sotto forma di vettore logico
+# in the form of a logical vector
 
 df1$sex == 'm'
 
-# oppure sotto forma dei casi che corrispondono a determinate condizioni
+# or in the form of the cases corresponding to certain conditions
 
 df1[df1$sex == 'm' ,]
 
 subset(df1, sex == 'm')
 
 
-# ancora, possiamo ordinare un dataframe in base a una delle sue variabili:
+# again, we can sort a dataframe according to one of its variables:
 
 ordf <- order(df1['age'])
 
-# in alternativa ordf <- order(df1$age)
+# alternatively 
+
+ordf <- order(df1$age)
 
 df1[ordf,]
 
@@ -146,45 +148,37 @@ ordf2 <- order(-df1['id'])
 df[ordf2,]
 
 
-# modificare i nomi delle variabili
+# change variable names
 
 colnames(df1)[6] <- 'married'
 
 colnames(df2) <- c('id', 'pref_food', 'city', 'income_k_y', 'married')
 
 
-# andiamo a verificare la struttura dei dati
+# let's check the data structure
 
-# la funzione summary restituisce informazioni sulla statistica di base delle variabili
+# the summary function returns information on the basic statistics of the variables
 
 summary(df1)
 
-# la funzione str() mi dà informazioni in più sulla struttura del dataframe
+# the str() function gives me extra information on the structure of the dataframe
 
 str(df1)
 
-# se convertiamo in questo modo otteniamo la conversione errata nei livelli del fattore
+
+
+# the variable height is currently in the form of a string, we need to convert it to a numeric value
 
 df1$heights <- as.integer(df1$heights)
 
-# dobbiamo convertire così
 
-df1$heights <- as.integer(as.character(df1$heights))
-
-# o ancora meglio, ricordarci di inserire il parametro stringsAsFactors al momento di importare i dati
-
-# stringsAsFactors = FALSE
-
-df1 <- data.frame(id = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-                  name = c('Laura', 'Simon', 'Kate', 'Francis', 'Joseph', 'Rosie', 'Matt', 'Eleanor', 'Angie', 'Hamed'),
-                  heights = c('168', '180', '165', '169', '178', '164', '182', '170', '163','164'),
-                  sex = c('f', 'm', 'f', 'm', 'm', 'f', 'm', 'f', 'f', 'm'),
-                  age = c(32, 35, 54, 57, 39, 42, 33, 16, 29, 27), stringsAsFactors = FALSE)
-
-
-# possiamo a questo punto unire i due dataframe sulla base di una chiave comune, che è la variabile 'id'
+# we can now merge the two dataframes on the basis of a common key, which is the 'id' variable
 
 merge(df1, df2, by = 'id')
+
+# let's check all the dataset on R with the following function
+
+data()
 
 
 

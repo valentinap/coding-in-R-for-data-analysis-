@@ -3,7 +3,7 @@ library(datasets)
 
 ui <- shinyUI(fluidPage(
         
-        titlePanel("Esempio"),
+        titlePanel("Example"),
         
         sidebarPanel(
                 selectInput("dataset", "Dataset", choices = c("rock", "pressure", "cars")),
@@ -21,7 +21,7 @@ server <- function(input, output) {
         })
         
         output$var <- renderUI({
-                radioButtons("varname","Scegli una variabile", names(datasetInput()))
+                radioButtons("varname","Choose a variable", names(datasetInput()))
         })
         
         output$plot <- renderPlot({

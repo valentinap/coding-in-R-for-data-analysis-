@@ -1,23 +1,23 @@
-presentazione1
+pres1
 ========================================================
 author: Valentina
-date: 2 May 2018
+date: 22 August 2022
 autosize: true
 
-Prima slide
+First slide
 ========================================================
 
-Per maggiori dettagli sul corso potete visitare il mio sito 
+For more info on this course visit my website  
 
 <https://ww.DataWiring.me>
 
-Ci troverete corsi e codici su 
+You will find courses and does on  
 
 - machine learning
 - deep learning
 - text mining
 
-Slide con codice
+Slide with code
 ========================================================
 
 
@@ -42,26 +42,29 @@ summary(iris)
                 
 ```
 
-Slide con grafico
+Slide with chart
 ========================================================
 
-![plot of chunk unnamed-chunk-2](pres1-figure/unnamed-chunk-2-1.png)
 
-Slide con immagine
+
+
+![plot of chunk unnamed-chunk-3](pres1-figure/unnamed-chunk-3-1.png)
+
+Slide with image
 ========================================================
 
 ![Logo DW](logo1.jpg)
 
-Slide con due colonne
+Slide with two columns
 ===============
 left:40%
 
-**Prima colonna**
+**First column**
 - this slide has two columns
 -	the first column has text
 -	the second column has an image
 
 ***
-**Seconda colonna**
+**Second column**
 
-![Margherite](daisies.jpg)
+![Daisies](daisies.jpg)

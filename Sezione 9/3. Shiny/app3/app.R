@@ -1,28 +1,32 @@
-# richiamiamo il pacchetto 
+# we recall the library
+
 library(shiny)
 
-# definiamo la user interface
+# we define the user interface
+
 ui <- fluidPage(
-        titlePanel("Titolo"),
+        titlePanel('Title'),
         
-        sidebarLayout(position = "left",
-                sidebarPanel('sidebar'),
-                mainPanel(h1("Titolo h1"),
-                          h2("Titolo h2"),
-                          h3("Titolo h3"),
-                          h4("Titolo h4"),
-                          p("con questa funzione creiamo un paragrafo di testo"),
-                          code("qui inseriamo del testo in formato codice"),
-                          div("con div possiamo modificare gli stili", style = "color:red"),
-                          img(src = "daisies.jpg", height = 140, width = 400)
-                          )
+        sidebarLayout(position = 'left',
+                      sidebarPanel('sidebar'),
+                      mainPanel(h1('Title h1'),
+                                h2('Title h2'),
+                                h3('Title h3'),
+                                h4('Title h4'),
+                                p('with this function we create a paragraph of text'),
+                                code('here we insert text in code format'),
+                                div('with div we can edit styles', style = 'color:red'),
+                                img(src = 'daisies.jpg', height = 140, width = 400)
+                      )
         )
 )
 
-# definiamo la logica del server
+# we define the server logic
+
 server <- function(input, output) {
         
 }
 
-# eseguiamo l'app
+# and we run the app
 shinyApp(ui = ui, server = server)
+

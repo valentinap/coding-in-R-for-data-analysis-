@@ -1,0 +1,20 @@
+# 1) save today's date in one object called “today”, using the function base Sys.Date() and the 
+# function of lubridate today()
+
+install.packages('lubridate')
+library(lubridate)
+
+# 2) convert the string '3-March-2018' with the most suitable function
+
+# 3) parse the string "20200131" with the appropriate lubridate function
+
+# 4) Given the vector x featuring the numbers 75, 98 and 47, convert it to character with the most suitable function, then convert it back to numeric format, checking the class each time 
+
+# 5) convert the first 10 cases of the Orange dataset to a matrix and then back to a dataframe
+
+# 6) install the tidyverse package with the following code and print the first 5 cases of the iris dataset and the first 5 cases of the diamonds dataset with the function head()
+
+install.packages('tidyverse')
+library(tidyverse)
+
+

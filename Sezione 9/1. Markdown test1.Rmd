@@ -1,17 +1,17 @@
 ---
-title: "Introduzione alla programmazione con R"
+title: "R coding for data analysts"
 author: "V.Porcu"
-date: "May 2, 2018"
+date: "September 4, 2022"
 output:
   html_document: default
   word_document: default
 ---
 
-## Esempi con Markdown
+## Examples with Markdown
 
-In questa lezione vediamo come creare un documento che includa sia del testo sia del codice con Markdown. Possiamo scrivere normalmente sul documento Markdown avendo cura di aggiungere il simbolo # per definire i titoli dei paragrafi
+In this lesson we will see how to create a document featuring both text and code with Markdown. We can normally write on the Markdown document, making sure we add the # symbol to define the titles of the paragraphs
 
-Andando in alto a destra su insert possiamo aggiungere uno spazio per il codice in R, che dev'essere delimitato all'inizio e alla fine da tre virgolette singole:
+Going to the top right on insert we can add a space for the code in R, which must be limited at the beginning and at the end by three single quotes:
 
 ```{r}
 
@@ -19,75 +19,79 @@ summary(iris)
 
 ```
 
-### Includiamo un grafico aggiungendo il parametro echo = FALSE
+### We include a graph by adding the echo = FALSE parameter
 
 ```{r, echo=FALSE}
 plot(iris)
 ```
 
-Se non lo aggiungiamo, verrà stampato il codice, oltre all'immagine:
+If we do not add it, the code will be printed, in addition to the image:
 
 ```{r}
 plot(iris$Species)
 ```
 
-Possiamo aggiungere del codice anche in un altro linguaggio:
+We can also add code in another programming language:
 
 ```{python}
-tupla1 = (1,2,3,4,5)
-lista1 = ["jan", "feb", "mar", "apr"]
+tuple1 = (1,2,3,4,5)
+list1 = ["jan", "feb", "mar", "apr"]
 ```
 
-Possiamo inserire dei titoli di varia grandezza aggiungendo un # oppure più #. Quanti più cancelletti aggiungiamo, tanto più piccolo sarà il titolo
+We can insert titles of various sizes by adding a # or more 
+#. The more pound keys we add, the smaller the title will be
 
-# Titolo 1
-## Titolo 2
-### Titolo 3
-#### Titolo 4
+# Title 1
+## Title 2
+### Title 3
+#### Title 4
 
-#### Possiamo inserire del testo in corsivo in questo modo:
 
-*corsivo1*
+#### We can insert italics text in this way:
 
-_corsivo2_
+*italics1*
 
-#### In grassetto in questo modo:
+_italics2_
 
-**grassetto1**
+#### this way for bold:
 
-__grassetto2__
+**bold1**
 
-#### Costruire degli elenchi puntati:
+__bold2__
 
-* lista
-* secondo elemento della lista
-    + sottoelemento 1
-    + sottoelemento 2
+#### Build bulleted lists:
+
+* list
+* second element of the list
+    + subelement 1
+    + subelement 2
     
-1. seconda lista
-2. secondo elemento della seconda lista
-    + sottoelemento 1
-    + sottoelemento 2
-    
-#### Costruire una tabella:
+1. second list
+2. second element of the second list
+    + subelement 1
+    + subelement 2
 
-Titolo tabella | Prima colonna
+    
+#### Building a table:
+
+Table title    | First column
 -------------- | -----------------------
-Riga uno       | primo valore colonna
-Riga due       | secondo valore colonna
+Line one       | first value column
+Line two       | second value column
 
-#### Possiamo inserire un link:
+#### We can insert a link:
 
-il mio link va apposto su [questa parte di testo](www.link_di_esempio.com)
+my link goes on [this section of text](www.example_link.com)
 
-#### Una formula matematica:
+#### A mathematical formula:
 
 $$ x * 3.14 $$
 
-#### O un'immagine
+#### Or an image
 
-![eventuale sottotitolo dell'immagine](https://www.r-project.org/logo/Rlogo.png)
+![subtitle for the image](https://www.r-project.org/logo/Rlogo.png)
 
-#### Possiamo ridurre le dimensioni dell'immagine
+
+#### We can reduce the size of the image
 
 ![logo R](https://www.r-project.org/logo/Rlogo.png){width=10%}

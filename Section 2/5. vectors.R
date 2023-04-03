@@ -15,7 +15,7 @@ assign('vector_name', c(2, 4, 7, 12, 15, 19))
 
 # seq()
 
-vet1 <- seq(from = 1, to = 20, by = 2)
+vec1 <- seq(from = 1, to = 20, by = 2)
 
 1:20
 
@@ -24,32 +24,32 @@ seq(1, 20)
 
 # operations on vectors
 
-vet2 <- c(1, 3, 6, 8, 9, 10)
+vec2 <- c(1, 3, 6, 8, 9, 10)
 
-sum(vet2)
+sum(vec2)
 
-mean(vet2)
+mean(vec2)
 
-median(vet2)
+median(vec2)
 
-vet2/2
+vec2/2
 
-vet2*3
+vec2*3
 
-length(vet2)
-
-
-vet3 <- c(1, 2, 3)
-vet4 <- c(4, 5, 6)
-
-sum <- vet3 + vet4
+length(vec2)
 
 
-multiplication <- vet3 * vet4
+vec3 <- c(1, 2, 3)
+vec4 <- c(4, 5, 6)
 
-subtraction <- vet3 - vet4
+sum <- vec3 + vec4
 
-division <- vet3/vet4
+
+multiplication <- vec3 * vec4
+
+subtraction <- vec3 - vec4
+
+division <- vec3/vec4
 
 # operations between multiples
 
