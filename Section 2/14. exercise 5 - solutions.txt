@@ -78,9 +78,7 @@ df1$new_height <- df1$heigth + 2
 
 # 15) reorder the dataset based on the new_heigth variable
 
-ordf <- order(df1["new_height"])
-
-df1[ordf,]
+ordf <-  df1[order(df1$new_heigth), ]
 
 # 16) from the preloaded dataset mtcars using the subset() function, extract the cases in which
 # the variable cyl is equal to 6
