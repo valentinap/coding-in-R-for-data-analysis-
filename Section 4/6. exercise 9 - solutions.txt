@@ -1,0 +1,71 @@
+# 1) load the df7 dataset with the basic functions
+
+df7 <- read.csv('df7.csv', header = TRUE, sep = '\t')
+
+# 2) download the df7 dataset as tibble with the name df7_tibble 
+
+library(readr)
+library(tidyverse)
+library(dplyr)
+
+df7_tibble <- tibble(df7)
+
+head(df7_tibble)
+
+write_csv(df7_tibble, 'df7_tibble.csv')
+
+
+# 3) load the df8 dataset with the readr package
+
+df8 <- read_delim('df8.csv', delim = '\t')
+
+# 4) download the df8 dataset with the basic functions
+
+write.csv(df8, 'df8_tibble.csv')
+
+# 5) load the second sheet of the df9 dataset with the readxl package and the most suitable function
+
+install.packages('readxl')
+library(readxl)
+
+df9 <- read_xlsx('df9.xlsx', sheet = 2)
+
+# 6) add to the dataset in the previous question a variable that adds up the variables var2 and var3
+
+df9$var6 <- df9$var2 + df9$var3
+
+
+# 7) download the file obtained in excel format with the most suitable function of the writexl package
+install.packages('writexl')
+library(writexl)
+
+write_xlsx(df9, 'df9_new.xlsx')
+
+
+# 8) I got the test datasets by mixing random variables as in the code below
+
+df10 <- data.frame(var1 = sample(letters[1:26], 10, replace = TRUE), 
+                 var2 = rnorm(10),
+                 var3 = runif(10, 1, 9.5),
+                 var4 = sample(10:50, 10, replace=T),
+                 var5 = sample(state.name, 10, replace = TRUE))
+
+
+write.table(df10, 'df10.csv', sep = ',')
+
+
+# try to generate a 10 cases df10 dataset by changing the variables accordingly
+
+
+
+# 9) convert the following data to dataframe format
+
+json1 <- '[
+  {"Name" : "Laura", "Pref_food" : "pizza", "City" : "Rome", "IncomeKY" : 55}, 
+  {"Name" : "Simon", "Pref_food" : "pasta", "City" : "Paris", "IncomeKY" : 60},
+  {"Name" : "Kate", "Pref_food" : "steak", "City" : "Milan", "IncomeKY" : 35} 
+]'
+
+library(jsonlite)
+
+df11 <- fromJSON(json1)

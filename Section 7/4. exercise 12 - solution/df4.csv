@@ -1,0 +1,30 @@
+city;area;manut;prezzoink;canone
+Milan;area A;low;50133;13
+Florence;area B;moderate;48387;44
+Bologna;area E;very low;72233;19
+Milan;area A;very low;52755;50
+Milan;area A;low;70269;47
+Milan;area D;low;54135;90
+Milan;area A;low;50133;13
+Milan;area E;very good;12943;85
+Bologna;area D;very good;65613;22
+Bologna;area E;very low;72233;19
+Florence;area D;very good;26053;93
+Cagliari;area C;good;72140;63
+Cagliari;area A;very low;45302;72
+Bologna;area A;moderate;19521;32
+Bologna;area D;moderate;82582;23
+Rome;area C;good;24557;73
+Florence;area A;good;27273;18
+Rome;area B;good;31756;57
+Cagliari;area B;low;99207;19
+Florence;area D;low;71915;47
+Rome;area D;moderate;6599500;38
+Bologna;area E;low;59397;67
+Bologna;area A;moderate;60751;51
+Florence;area D;low;53563;90
+Bologna;area E;low;59397;67
+Cagliari;area D;very low;2422;51
+Rome;area D;moderate;9560000;23
+Rome;area D;moderate;9560;23
+Cagliari;area B;low;99207;19
