@@ -101,15 +101,15 @@ df1[, -c(1,3)]
 
 # in the form of a single vector
 
-df1[, ‘name’]
+df1[, 'name']
 
 # as dataframe
 
-df1[‘heights’]
+df1['heights']
 
 # querying the dataframe on a single case
 
-df1[ 3, ‘sex’]
+df1[ 3, 'sex']
 
 # on several cases
 
@@ -135,7 +135,7 @@ subset(df1, sex == 'm')
 
 # again, we can sort a dataframe according to one of its variables:
 
-ordf <- order(df1['age'])
+ordf <- order(df1[,'age'])
 
 # alternatively 
 
