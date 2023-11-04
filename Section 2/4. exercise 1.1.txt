@@ -1,0 +1,32 @@
+# 1) calculate 395 - 147
+
+395 - 147
+
+# 2) calculate the following multiplication: 89 by 26
+
+89 * 26
+
+# 3) create an object x featuring number 78
+
+x <- 78
+
+# 4) create a sequence of numbers from 1 to 15 and save it in an object called y
+
+y <- 1:15
+
+# 5) print object x at screen and the object y using the print() function
+
+x
+
+print(y)
+
+# 6) create an object z featuring the operation at entry 1)
+
+z <- 395 - 147
+
+# 7) print object z using the print() function
+
+print(z)
+
+
+
