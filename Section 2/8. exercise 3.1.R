@@ -1,0 +1,6 @@
+# 1) with the help of the following code, please create the two matricesset.seed(1234)mat4 <- matrix(sample(1:10, 4*5, replace=TRUE), nrow=4, ncol=5)mat5 <- matrix(sample(1:10, 4*5, replace=TRUE), nrow=4, ncol=5)# 2) Find out the number of columns and rows of the two matrices ncol(mat4)ncol(mat5)nrow(mat4)nrow(mat5)# 3) Transpose the matrix mat4t(mat4)# 4) Find the mean and sum of the rows and columns of the matrix mat4rowMeans(mat4)colMeans(mat4)colSums(mat4)rowSums(mat4)# 5) Select from mat5 the third columnmat5[, 3]# 6) Now select the entire second rowmat5[2, ]# 7) Select rows 2 to 4 excludedmat5[2:3,]
+
+# 8) Assign the names col1, col2 and col3 etc. to the columns of the matrix mat5
+# Also assign the row names: row1, row2 etc. 
+# If necessary, double-check the number of rows and columns
+# print the matrix again to check that the names are correctcolnames(mat5) <- c("col1", "col2", "col3", "col4", "col5")rownames(mat5) <- c("row1", "row2", "row3", 'row4')print(mat5)# 9) check whether it is possible to sum and multiply the two matricesmat4 + mat5mat4 * mat5# 10) replace in mat4 all elements greater than 5 with 0mat4[mat4 > 5] <- 0
